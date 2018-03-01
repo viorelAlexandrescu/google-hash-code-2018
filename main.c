@@ -10,8 +10,18 @@ int main()
     initInputFile(inputPath);
     info problemDetails = readDetails();
     ride* rides = readRides();
-    unsigned int curent_step = 0;
+    car masini[problemDetails.numberOfCars];
     int i;
+    for(i = 0; i < problemDetails.numberOfCars; i++)
+    {
+        masini[i].id=i+1;
+        masini[i].positionX=0;
+        masini[i].positionY=0;
+        masini[i].ridesDone=0;
+        masini[i].isAvailable=0;
+    }
+    unsigned int curent_step = 0;
+
     while(curent_step<=problemDetails.numberOfSteps)
     {
         verificare_curse_valabile(rides,problemDetails.numberOfRides);
@@ -19,7 +29,7 @@ int main()
         {
             if(verificare_masina_valabila(masini[i]))
             {
-                cautare_cursa_optima(masini[i],rides,problemDetails,curent_step);
+                cautare_cursa_optima(masini[i], rides, problemDetails);
             }
             terminare_cursa(masini[i]);
         }
