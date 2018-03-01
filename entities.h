@@ -6,15 +6,10 @@ typedef struct {
     unsigned int nextSteptY;
 } step;
 
-typedef struct {
-    unsigned int positionX;
-    unsigned int positionY;
-
-    char isAvailable;
-    step* steps;
-} car;
 
 typedef struct {
+    unsigned int id;
+
     unsigned int startX;
     unsigned int startY;
 
@@ -26,6 +21,16 @@ typedef struct {
 
     char isAvailable;
 } ride;
+
+typedef struct {
+    unsigned int id;
+    unsigned int ridesDone;
+    unsigned int positionX;
+    unsigned int positionY;
+    char isAvailable;
+    step* steps;
+    ride* rides;
+} car;
 
 typedef struct {
     unsigned int numberOfRows;
