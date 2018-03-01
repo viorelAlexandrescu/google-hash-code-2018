@@ -2,6 +2,11 @@
 #define entities
 
 typedef struct {
+    unsigned int nextStepX;
+    unsigned int nextSteptY;
+} step;
+
+typedef struct {
     unsigned int positionX;
     unsigned int positionY;
 
@@ -23,13 +28,8 @@ typedef struct {
 } ride;
 
 typedef struct {
-    unsigned int nextStepX;
-    unsigned int nextSteptY;
-} step;
-
-typedef struct {
     unsigned int numberOfRows;
-    unsigned int numberOfLines;
+    unsigned int numberOfColumns;
     unsigned int numberOfCars;
     unsigned int numberOfRides;
     unsigned int bonus;
