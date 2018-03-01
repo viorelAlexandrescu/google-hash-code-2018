@@ -10,6 +10,12 @@ typedef struct {
 } car;
 
 typedef struct {
+    unsigned int startX;
+    unsigned int startY;
+
+    unsigned int finishX;
+    unsigned int finishY;
+
     unsigned int earliestStart;
     unsigned int latestFinish;
 
