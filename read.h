@@ -26,7 +26,7 @@ ride* readRides()
     {
         fscanf(input, "%u %u %u %u %u %u" , &curse[i].startX, &curse[i].startY, &curse[i].finishX, &curse[i].finishY, &curse[i].earliestStart, &curse[i].latestFinish);
     }
-    return curse;
+    return &curse;
 }
 
 void printRides(const char *filePath, car* cars, unsigned int numberOfCars)

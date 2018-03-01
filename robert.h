@@ -57,6 +57,7 @@ void cautare_cursa_optima(car* masina, ride* rides, info informatii, unsigned in
 
 void terminare_cursa(car masina)
 {
+    if(masina.isAvailable!=0)
     masina.isAvailable--;
 }
 #endif // ROBERT_H_INCLUDED
