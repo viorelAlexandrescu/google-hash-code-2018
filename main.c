@@ -29,7 +29,7 @@ int main()
         {
             if(verificare_masina_valabila(masini[i]))
             {
-                cautare_cursa_optima(masini[i], rides, problemDetails);
+                cautare_cursa_optima(&masini[i], rides, problemDetails, curent_step);
             }
             terminare_cursa(masini[i]);
         }
