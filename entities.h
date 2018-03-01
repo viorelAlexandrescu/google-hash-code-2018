@@ -2,15 +2,23 @@
 #define entities
 
 typedef struct {
-    int a;
+    unsigned int positionX;
+    unsigned int positionY;
+
+    char isAvailable;
+    step* steps;
 } car;
 
 typedef struct {
-    int a;
+    unsigned int earliestStart;
+    unsigned int latestFinish;
+
+    char isAvailable;
 } ride;
 
 typedef struct {
-    int a;
-} map;
+    unsigned int nextStepX;
+    unsigned int nextSteptY;
+} step;
 
 #endif
