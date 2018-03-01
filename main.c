@@ -8,7 +8,7 @@ int main()
     unsigned int curent_step=0; // nr actual de step
 //    while(curent_step<=)
 //    {
-        verificare_masina_valabila(2);
+        verificare_masina_valabila();
 //    }
 //
     return 0;
