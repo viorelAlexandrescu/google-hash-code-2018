@@ -1,5 +1,6 @@
 #include "entities.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 unsigned int numberOfRides;
 FILE* input;
@@ -19,7 +20,7 @@ info readDetails()
 
 ride* readRides()
 {
-    ride curse[numberOfRides];
+    ride* curse = (ride*)malloc(numberOfRides * sizeof(ride));
 
     int i;
     for(i = 0; i < numberOfRides; i++)

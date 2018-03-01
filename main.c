@@ -6,8 +6,7 @@
 
 int main()
 {
-    const char *inputPath = "b_should_be_easy.in";
-    initInputFile(inputPath);
+    initInputFile("b_should_be_easy.in");
     info problemDetails = readDetails();
     ride* rides = readRides();
     car masini[problemDetails.numberOfCars];
