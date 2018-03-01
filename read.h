@@ -1,7 +1,8 @@
-#include "entities.h"w
+#include "entities.h"
+#include <stdio.h>
 unsigned int numberOfRides;
 
-FILE* input = fopen(filePath, "r")
+FILE* input = fopen(filePath, "r");
 
 info readDetails(const char *filePath;)
 {
