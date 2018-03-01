@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1519932443 source:e:\hashcode2018\google-hash-code-2018\main.c
+	<stdio.h>
+	<stdlib.h>
+	"entities.h"
+	"robert.h"
+
+1519932512 e:\hashcode2018\google-hash-code-2018\entities.h
+
+1519932621 e:\hashcode2018\google-hash-code-2018\robert.h
+
