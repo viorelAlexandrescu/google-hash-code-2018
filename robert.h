@@ -27,10 +27,29 @@ void verificare_curse_valabile(ride* rides, unsigned int maxRides)
 }
 
 
-void cautare_cursa_optima(car masina, ride cursa, info informatii)
+void cautare_cursa_optima(car masina, ride rides, info informatii, unsigned int step)
 {
-    unsigned int timp_drum, timp_cursa, timp_total;
-    timp_drum = (unsigned int)floor( (double)(ride.startX-masina.positionX+) )
+    unsigned int timp_drum, timp_cursa, timp_total, DistantaOptima=2000000, IdOptim;
+    int i;
+    for(i=0;i<informatii.numberOfRides;i++)
+    {
+        if(rides[i].isAvailable)
+        {
+            timp_drum = (unsigned int)floor((double)(rides[i].startX-masina.positionX+rides[i].startY-masina.positionY));
+            timp_cursa = (unsigned int)floor((double)(rides[i].startX-rides[i].finishX+rides[i].startY-rides[i].finishY));
+            timp_total=timp_drum+timp_cursa;
+            if(timp_total+step<=rides[i].latestFinish && timp_total<=DistantaOptima)
+            {
+                DistantaOptima=timp_total;
+                IdOptim=rides[i].id;
+            }
+        }
+    }
+    masina.isAvailable=masina.isAvailable+timp_total;
+    masina.positionX=rides[IdOptim].finishX;
+    masina.positionY=rides[IdOptim].finishY;
+    masina.ridesDone++;
+//    masina.rides++  baga realoc
 }
 
 
