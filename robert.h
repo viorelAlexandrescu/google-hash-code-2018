@@ -29,8 +29,8 @@ void verificare_curse_valabile(ride* rides, unsigned int maxRides)
 
 void cautare_cursa_optima(car masina, ride rides, info informatii, unsigned int step)
 {
-    unsigned int timp_drum, timp_cursa, timp_total, DistantaOptima=2000000, IdOptim;
-    int i;
+    unsigned int timp_drum, timp_cursa, timp_total, DistantaOptima=2000000;
+    int i, IdOptim;
     for(i=0;i<informatii.numberOfRides;i++)
     {
         if(rides[i].isAvailable)
@@ -45,6 +45,7 @@ void cautare_cursa_optima(car masina, ride rides, info informatii, unsigned int 
             }
         }
     }
+    rides[IdOptim].isAvailable=0;
     masina.isAvailable=masina.isAvailable+timp_total;
     masina.positionX=rides[IdOptim].finishX;
     masina.positionY=rides[IdOptim].finishY;
@@ -52,5 +53,8 @@ void cautare_cursa_optima(car masina, ride rides, info informatii, unsigned int 
 //    masina.rides++  baga realoc
 }
 
-
+void terminare_cursa(car masina)
+{
+    masina.isAvailable--;
+}
 #endif // ROBERT_H_INCLUDED
