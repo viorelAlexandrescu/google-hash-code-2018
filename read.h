@@ -9,15 +9,15 @@ void initInputFile(const char* filePath)
     input = fopen(filePath, "r");
 }
 
-info readDetails(const char *filePath)
+info readDetails()
 {
     info problemDetails;
-    fscanf(input, "%u%u%u%u%u%u", &problemDetails.numberOfRows, &problemDetails.numberOfColumns, &problemDetails.numberOfCars, &problemDetails.numberOfRides, &problemDetails.bonus, &problemDetails.numberOfSteps);
+    fscanf(input, "%u %u %u %u %u %u", &problemDetails.numberOfRows, &problemDetails.numberOfColumns, &problemDetails.numberOfCars, &problemDetails.numberOfRides, &problemDetails.bonus, &problemDetails.numberOfSteps);
     numberOfRides = problemDetails.numberOfRides;
     return problemDetails;
 }
 
-ride* readRides(const char *filePath)
+ride* readRides()
 {
     ride curse[numberOfRides];
 
