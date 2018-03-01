@@ -27,4 +27,13 @@ typedef struct {
     unsigned int nextSteptY;
 } step;
 
+typedef struct {
+    unsigned int numberOfRows;
+    unsigned int numberOfLines;
+    unsigned int numberOfCars;
+    unsigned int numberOfRides;
+    unsigned int bonus;
+    unsigned int numberOfSteps;
+} info;
+
 #endif
